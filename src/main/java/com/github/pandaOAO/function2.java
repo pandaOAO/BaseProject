@@ -1,5 +1,4 @@
-package se;
-
+package com.github.pandaOAO;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -9,7 +8,7 @@ public class function2 {
 
     int a[] = new int[25];
 
-    System.out.print("½Ğ¿é¤J§Aªº²´²yª½®|¬O¦h¤Ömm");
+    System.out.print("è«‹è¼¸å…¥ä½ çš„çœ¼çƒç›´å¾‘æ˜¯å¤šå°‘mm");
 
     Scanner scanner = new Scanner(System.in);
 
@@ -28,8 +27,8 @@ public class function2 {
       }
     }
 
-    System.out.println("½Ğ¼Æ¥X´X­Ó0´X­Ó1");
-    System.out.println("¦b¼Æ¤@¦¸«ö0 µ²§ô«ö1");
+    System.out.println("è«‹æ•¸å‡ºå¹¾å€‹0å¹¾å€‹1");
+    System.out.println("åœ¨æ•¸ä¸€æ¬¡æŒ‰0 çµæŸæŒ‰1");
 
     int enter = scanner.nextInt();
 
@@ -45,8 +44,8 @@ public class function2 {
         System.out.print(num);
       }
 
-      System.out.println("½Ğ¼Æ¥X´X­Ó0´X­Ó1");
-      System.out.println("¦b¼Æ¤@¦¸«ö0 µ²§ô«ö1");
+      System.out.println("è«‹æ•¸å‡ºå¹¾å€‹0å¹¾å€‹1");
+      System.out.println("åœ¨æ•¸ä¸€æ¬¡æŒ‰0 çµæŸæŒ‰1");
 
       int enter2 = scanner.nextInt();
       enter = enter2;

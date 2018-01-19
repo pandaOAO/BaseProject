@@ -1,4 +1,4 @@
-package se;
+package com.github.pandaOAO;
 
 import java.util.Date;
 import java.util.TimerTask;
