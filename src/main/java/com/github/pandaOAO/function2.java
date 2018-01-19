@@ -25,11 +25,11 @@ public class function2 {
         }
         System.out.print(num);
       }
-    }
+    
 
     System.out.println("請數出幾個0幾個1");
     System.out.println("在數一次按0 結束按1");
-
+}
     int enter = scanner.nextInt();
 
     do {
