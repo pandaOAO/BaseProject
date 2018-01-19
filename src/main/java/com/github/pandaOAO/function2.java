@@ -14,7 +14,7 @@ public class function2 {
 
     int cm = scanner.nextInt();
 
-    if (cm > 11) {
+    if (cm > 11&&cm>0) {
       for (int i = 0; i < 25; i++) {
         Random ran = new Random();
         int num = ran.nextInt(2);
