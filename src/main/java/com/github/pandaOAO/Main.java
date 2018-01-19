@@ -16,13 +16,13 @@ public class Main {
 
   public static void chooseList() {
 
-    System.out.println("ä½ æœ‰ä»€éº¼æ¨£çš„å›°æ“¾å‘¢ï¼Ÿ");
-    System.out.println("1.æ‡¶å¾—æ´—é ­");
-    System.out.println("2.çœ¼ç›å¤ªå¤§");
-    System.out.println("3.è¢«è‡ªå·±å¸¥é†’");
-    System.out.println("4.è¦ºå¾—è‡ªå·±å¤ªç¾");
-    System.out.println("5.ä¸€ç›´æƒ³ä¸Šå»æ‰€");
-    System.out.print("è«‹é¸æ“‡ï¼š");
+    System.out.println("§A¦³¤°»ò¼Ëªº§xÂZ©O¡H");
+    System.out.println("1.Ãi±o¬~ÀY");
+    System.out.println("2.²´·ú¤Ó¤j");
+    System.out.println("3.³Q¦Û¤v«Ó¿ô");
+    System.out.println("4.Ä±±o¦Û¤v¤Ó¬ü");
+    System.out.println("5.¤@ª½·Q¤W´Z©Ò");
+    System.out.print("½Ğ¿ï¾Ü¡G");
 
     int choose;
     Scanner scanner = new Scanner(System.in);
@@ -31,7 +31,6 @@ public class Main {
     switch (choose) {
 
     case 1:
-      Choice1.choose1();
       break;
     case 2:
       function2 f2 = new function2();
@@ -46,7 +45,7 @@ public class Main {
       beautiful.beautifula(null);
       break;
     case 5:
-      System.out.println("é–‹å§‹æ™‚é–“:" + new java.util.Date());
+      System.out.println("¶}©l®É¶¡:" + new java.util.Date());
       restroomQ rest = new restroomQ();
       rest.rest();
       break;

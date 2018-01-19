@@ -27,12 +27,12 @@ public class restroomQ {
     
     
     String s = "yes";
-    Timer timer = new Timer(); // å»ºç«‹ä¸€å€‹Timerç‰©ä»¶
-    TimerTask showtime = new TimerTask() {// ä¹Ÿå¯ä»¥ç”¨åŒ¿åé¡åˆ¥çš„æ–¹å¼ï¼Œ
+    Timer timer = new Timer(); // «Ø¥ß¤@­ÓTimerª«¥ó
+    TimerTask showtime = new TimerTask() {// ¤]¥i¥H¥Î°Î¦WÃş§Oªº¤è¦¡¡A
       @Override
       public void run() {
         // TODO Auto-generated method stub
-        System.out.println(new Date()); // è¼¸å‡ºæ™‚é–“
+        System.out.println(new Date()); // ¿é¥X®É¶¡
       }
     };
     TimerTask gogo = new TimerTask() {
@@ -40,39 +40,39 @@ public class restroomQ {
       public void run() {
         // TODO Auto-generated method stub
         if (diaper > 0) {
-          System.out.println("è†€èƒ± Bang!éœ€è¦åŒ…å°¿å¸ƒå›‰ åŒ…èµ·ä¾†");
-          System.out.println("å°¿å¸ƒæ•¸é‡:"+diaper);
+          System.out.println("»H¯Ö Bang!»İ­n¥]§¿¥¬Åo ¥]°_¨Ó");
+          System.out.println("§¿¥¬¼Æ¶q:"+diaper);
           subdiaper();
         } else {
-          System.out.println("è†€èƒ± Bang!ä½†ä½ è©²ç”¨å°¿å£ºäº†");
-          System.out.println("å°¿å¸ƒæ•¸é‡:"+diaper);
-          System.out.println("è©²è²·å°¿å¸ƒå›‰ï¼Œç³»çµ±å·²è‡ªå‹•è³¼è²·3ç‰‡å°¿å¸ƒ");
+          System.out.println("»H¯Ö Bang!¦ı§A¸Ó¥Î§¿³ı¤F");
+          System.out.println("§¿¥¬¼Æ¶q:"+diaper);
+          System.out.println("¸Ó¶R§¿¥¬Åo¡A¨t²Î¤w¦Û°ÊÁÊ¶R3¤ù§¿¥¬");
           adddiaper();
           adddiaper();
           adddiaper();
-          System.out.println("å°¿å¸ƒå‰©ä¸‹:"+diaper);
+          System.out.println("§¿¥¬³Ñ¤U:"+diaper);
         }
 
       }
     };
 
-    System.out.println("æ­¡è¿ä½¿ç”¨");
-    System.out.println("è†€èƒ±å•é¡Œè§£æ±ºæ©Ÿï¼Œé–‹æ©Ÿå°±é€å°¿å¸ƒ*1");
+    System.out.println("Åwªï¨Ï¥Î");
+    System.out.println("»H¯Ö°İÃD¸Ñ¨M¾÷¡A¶}¾÷´N°e§¿¥¬*1");
     adddiaper();
     while (test == 0) {
-      System.out.println("è«‹å•éœ€è¦é–‹å§‹è¨ˆæ™‚äº†å—?(yes/no)");
+      System.out.println("½Ğ°İ»İ­n¶}©l­p®É¤F¶Ü?(yes/no)");
       choose = scanner.next();
       if (choose.equals(s)) {
         test++;
       }
     }
-    System.out.println("å¤šä¹…æƒ³å°¿å°¿?");
+    System.out.println("¦h¤[·Q§¿§¿?");
     int timeee;
     timeee = scanner.nextInt();
-    System.out.println("é–‹å§‹è¨ˆæ™‚");
-    timer.schedule(gogo, timeee, timeee);// 5ç§’å¾Œé–‹å§‹ï¼Œä¹‹å¾Œæ¯é5ç§’å†åŸ·è¡Œ
+    System.out.println("¶}©l­p®É");
+    timer.schedule(gogo, timeee, timeee);// 5¬í«á¶}©l¡A¤§«á¨C¹L5¬í¦A°õ¦æ
 
-    // timer.schedule(xxx, Date);ç¬¬äºŒå€‹åƒæ•¸æ˜¯å¯ä»¥æŒ‡å®šæ™‚é–“ï¼Œä»€éº¼æ™‚å€™é–‹å§‹åŸ·è¡Œã€‚
+    // timer.schedule(xxx, Date);²Ä¤G­Ó°Ñ¼Æ¬O¥i¥H«ü©w®É¶¡¡A¤°»ò®É­Ô¶}©l°õ¦æ¡C
     scanner.close();
   }
 

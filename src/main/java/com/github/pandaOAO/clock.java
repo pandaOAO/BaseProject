@@ -9,12 +9,12 @@ import java.text.SimpleDateFormat;
 
 public class clock {
   public static void clockk() {
-    System.out.print("ç¾åœ¨æ™‚é–“: " + GetCurrentTime("hh:mm:ss") + "\r");
+    System.out.print("²{¦b®É¶¡: " + GetCurrentTime("hh:mm:ss") + "\r");
     System.out.println("");
     // String nowTime = GetCurrentTime("hh:mm:ss");
-    // è¨­å®šé¬§éˆ´æ™‚é–“
+    // ³]©w¾x¹a®É¶¡
     String alarmTime = SetAlarmTime();
-    // åŸ·è¡Œé¬§éˆ´ç¨‹å¼
+    // °õ¦æ¾x¹aµ{¦¡
     try {
       Check_AlarmTime(alarmTime);
     } catch (Exception e) {
@@ -26,10 +26,10 @@ public class clock {
   public static void Check_AlarmTime(String alarmTime) throws Exception {
     while (true) {
       String nowTime = GetCurrentTime("hh:mm:ss");
-      System.out.print(" ç¾åœ¨æ™‚é–“: " + nowTime + "\r");
-      // æª¢æŸ¥æ˜¯å¦æ™‚é–“åˆ°
+      System.out.print(" ²{¦b®É¶¡: " + nowTime + "\r");
+      // ÀË¬d¬O§_®É¶¡¨ì
       if (nowTime.equals(alarmTime)) {
-        Alarm_UP(5); // åŸ·è¡Œé¬§é˜éˆ´éŸ¿
+        Alarm_UP(5); // °õ¦æ¾xÄÁ¹aÅT
         break;
       }
     }
@@ -37,7 +37,7 @@ public class clock {
 
   public static String SetAlarmTime() {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    System.out.print("è«‹è¼¸å…¥é¬§éˆ´æ™‚é–“(hh:mm:ss):");
+    System.out.print("½Ğ¿é¤J¾x¹a®É¶¡(hh:mm:ss):");
     String line = null;
     try {
       line = br.readLine();
@@ -46,27 +46,27 @@ public class clock {
       e.printStackTrace();
     }
     return line;
-  } // æ™‚é˜ç¨‹å¼
+  } // ®ÉÄÁµ{¦¡
 
   public static String GetCurrentTime(String dateFormat) {
     Calendar cal = Calendar.getInstance();
     SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
     return sdf.format(cal.getTime());
-  } // é¬§éˆ´ç¨‹å¼ num æ˜¯é¬§éˆ´éŸ¿çš„æ¬¡æ•¸
+  } // ¾x¹aµ{¦¡ num ¬O¾x¹aÅTªº¦¸¼Æ
 
   public static void Alarm_UP(int num) {
-    char BEE = (char) 7; // å—¶å—¶è²
+    char BEE = (char) 7; // ¹Í¹ÍÁn
     for (int i = 0; i < num; i++) {
       Random random = new Random();
       Scanner keyboard = new Scanner(System.in);
-      System.out.println("æ‡¶è±¬ èµ·åºŠ!!! æ™‚é–“åˆ°å›‰!! " + BEE);
+      System.out.println("Ãi½Ş °_§É!!! ®É¶¡¨ìÅo!! " + BEE);
       badword();
       /*
        * //////////////////////////////////////////////////////////////////////// File
        * audioFile = new File("123"); AudioPlayer player =
        * AudioPlayer.createPlayer(audioFile); player.play();
        */
-      //////////////////////////////////////////////////////////// æ•¸å­¸é¡Œç›®
+      //////////////////////////////////////////////////////////// ¼Æ¾ÇÃD¥Ø
       int aa = random.nextInt(1000);
       int bb = random.nextInt(1000);
       int cc = aa + bb;
@@ -88,7 +88,7 @@ public class clock {
 
   }
 
-  ///////////////////////////////////////////////////////////////////////// ç½µäºº
+  ///////////////////////////////////////////////////////////////////////// ½|¤H
   public static void badword() {
     int a;
     Random random = new Random();
@@ -96,34 +96,34 @@ public class clock {
 
     switch (a) {
     case 1:
-      System.out.println("ä½ é•·çš„å¾ˆé‡ç¸æ´¾å˜›ï¼");
+      System.out.println("§Aªøªº«Ü³¥Ã~¬£¹À¡I");
       break;
     case 2:
-      System.out.println("ä½ é•·å¾—çœŸæ˜¯æŒ‘æˆ°ç¾å­¸å‘€ï¼");
+      System.out.println("§Aªø±o¯u¬O¬D¾Ô¬ü¾Ç§r¡I");
       break;
     case 3:
-      System.out.println("ä½ é•·æˆé€™æ¨£ä½ åª½åª½çŸ¥é“å—ï¼Ÿ");
+      System.out.println("§Aªø¦¨³o¼Ë§A¶ı¶ıª¾¹D¶Ü¡H");
       break;
     case 4:
-      System.out.println("ä½ é•·å¾—çœŸçš„æœ‰å¤ é†œ");
+      System.out.println("§Aªø±o¯uªº¦³°÷Áà");
       break;
     case 5:
-      System.out.println("ä½ é•·å¾—çœŸæœ‰å‰µæ„ï¼Œæ´»å¾—çœŸæœ‰å‹‡æ°£ï¼");
+      System.out.println("§Aªø±o¯u¦³³Ğ·N¡A¬¡±o¯u¦³«i®ğ¡I");
       break;
     case 6:
-      System.out.println("ä½ é•·çš„è‚†ç„¡å¿Œæ†šã€æœ‰æƒç„¡æçš„ï¼");
+      System.out.println("§Aªøªº¸vµL§Ò¼ª¡B¦³«îµL®£ªº¡I");
       break;
     case 7:
-      System.out.println("ä½ ç©¿å¾—å¾ˆå±éšªï¼Œä½†é•·å¾—å¾ˆå®‰å…¨ã€‚");
+      System.out.println("§A¬ï±o«Ü¦MÀI¡A¦ıªø±o«Ü¦w¥ş¡C");
       break;
     case 8:
-      System.out.println("ä½ å»ç…§ç…§é¡å­ï¼Œä¿è­‰èƒ½æŠŠä½ åš‡æ­»ã€‚");
+      System.out.println("§A¥h·Ó·ÓÃè¤l¡A«OÃÒ¯à§â§AÀ~¦º¡C");
       break;
     case 9:
-      System.out.println("æˆ‘å‹¸ä½ ä¸€å¥ï¼Œä½ é‚„æ˜¯é‡æ–°æŠ•èƒæ¯”è¼ƒå¥½ã€‚");
+      System.out.println("§ÚÄU§A¤@¥y¡A§AÁÙ¬O­«·s§ë­L¤ñ¸û¦n¡C");
       break;
     case 10:
-      System.out.println("å“å‘¦ï¼Œä½ è‡‰æ€éº¼äº†ï¼Œæ²¹åˆ°åå…‰çœ‹ä¸æ¸…äº†ï¼");
+      System.out.println("«uËç¡A§AÁy«ç»ò¤F¡Aªo¨ì¤Ï¥ú¬İ¤£²M¤F¡I");
       break;
 
     }
