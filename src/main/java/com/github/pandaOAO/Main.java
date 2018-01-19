@@ -1,6 +1,7 @@
-package com.github.pandaOAO;
+package se;
 
 import java.util.Scanner;
+import java.util.Date;
 
 import choice1.data.Choice1;
 
@@ -24,10 +25,8 @@ public class Main {
     System.out.print("請選擇：");
 
     int choose;
-
     Scanner scanner = new Scanner(System.in);
     choose = scanner.nextInt();
-    System.out.println("");
 
     switch (choose) {
 
@@ -35,12 +34,21 @@ public class Main {
       Choice1.choose1();
       break;
     case 2:
+      function2 f2 = new function2();
+      f2.run();
       break;
     case 3:
+      clock clocka = new clock();
+      clocka.clockk();
       break;
     case 4:
+      beautifull beautiful = new beautifull();
+      beautiful.beautifula(null);
       break;
     case 5:
+      System.out.println("開始時間:" + new java.util.Date());
+      restroomQ rest = new restroomQ();
+      rest.rest();
       break;
     default:
       chooseList();
