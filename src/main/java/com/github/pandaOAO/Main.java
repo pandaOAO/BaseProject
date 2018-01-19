@@ -1,7 +1,6 @@
 package com.github.pandaOAO;
 
 import java.util.Scanner;
-import java.util.Date;
 
 import choice1.data.Choice1;
 
@@ -24,9 +23,23 @@ public class Main {
     System.out.println("5.一直想上廁所");
     System.out.print("請選擇：");
 
-    int choose;
+    int choose = 0;
     Scanner scanner = new Scanner(System.in);
-    choose = scanner.nextInt();
+
+    boolean IsMatch = false;
+
+    while (!IsMatch) {
+
+      try {
+        choose = scanner.nextInt();
+        IsMatch = true;
+      } catch (Exception e) {
+
+        scanner.nextLine();
+        System.out.println("請輸入正整數：");
+      }
+
+    }
 
     switch (choose) {
 
@@ -51,6 +64,7 @@ public class Main {
       rest.rest();
       break;
     default:
+      System.out.println("---請輸入1~5之正整數---");
       chooseList();
       break;
     }
