@@ -5,7 +5,7 @@ public class beautifull {
         Scanner scanner = new Scanner(System.in);
  
         System.out.print("Are you beautiful?:\n");
-        System.out.print("yes = 0 ,no = 1");
+        System.out.println("yes = 0 ,no = 1");
         int sign = scanner.nextInt();
         
         Scanner bloody = new Scanner(System.in);
@@ -14,7 +14,7 @@ public class beautifull {
         		System.out.print("you are ugly,you look like pig\n");
         	}
         	System.out.print("Are you beautiful?:\n");
-            System.out.print("yes = 0 ,no = 1");
+            System.out.println("yes = 0 ,no = 1");
             int git = scanner.nextInt();
             if(git==0) {
             	for(int i = 0;i < 15;i++) {
