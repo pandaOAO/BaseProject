@@ -65,7 +65,7 @@ public class restroomQ {
         test++;
       }
     }
-    System.out.println("多久想尿尿?");
+    System.out.println("多久會想尿尿?(毫秒)");
     int timeee;
     timeee = scanner.nextInt();
     System.out.println("開始計時");
