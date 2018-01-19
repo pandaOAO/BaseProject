@@ -2,6 +2,8 @@ package com.github.pandaOAO;
 
 import java.util.Scanner;
 
+import choice1.data.Choice1;
+
 public class Main {
 
   public static void main(String[] args) {
@@ -25,10 +27,12 @@ public class Main {
 
     Scanner scanner = new Scanner(System.in);
     choose = scanner.nextInt();
+    System.out.println("");
 
     switch (choose) {
 
     case 1:
+      Choice1.choose1();
       break;
     case 2:
       break;
