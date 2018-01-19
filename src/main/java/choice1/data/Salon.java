@@ -7,17 +7,19 @@ public class Salon {
   double distance;
   String address;
   String phone;
-  String businessHours;
+  String businessHoursStart;
+  String businessHoursEnd;
 
   // Salon的建構子
-  Salon(String name, double level, double distance, String address, String phone, String businessHours) {
+  Salon(String name, double level, double distance, String address, String phone, String businessHoursStart, String businessHoursEnd) {
 
     this.name = name;
     this.level = level;
     this.distance = distance;
     this.address = address;
     this.phone = phone;
-    this.businessHours = businessHours;
+    this.businessHoursStart = businessHoursStart;
+    this.businessHoursEnd = businessHoursEnd;
   }
 
   public String getName() {
@@ -60,12 +62,12 @@ public class Salon {
     this.phone = phone;
   }
 
-  public String getBusinessHours() {
-    return businessHours;
+  public String getbusinessHoursStart() {
+    return businessHoursStart;
   }
 
-  public void setBusinessHours(String businessHours) {
-    this.businessHours = businessHours;
+  public void setbusinessHoursStart(String businessHoursStart) {
+    this.businessHoursStart = businessHoursStart;
   }
 
 }
