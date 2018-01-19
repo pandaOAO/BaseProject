@@ -8,124 +8,126 @@ import java.util.Calendar;
 import java.text.SimpleDateFormat;
 
 public class clock {
-  public static void clockk()  {
-  System.out.print("²{¦b®É¶¡: " + GetCurrentTime("hh:mm:ss") + "\r");
-  System.out.println("");
-  //String nowTime = GetCurrentTime("hh:mm:ss");
-  // ³]©w¾x¹a®É¶¡
-  String alarmTime = SetAlarmTime();
-  // °õ¦æ¾x¹aµ{¦¡
-  try {
-    Check_AlarmTime(alarmTime);
-  } catch (Exception e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-  }
- }
-
- public static void Check_AlarmTime(String alarmTime) throws Exception {
-  while (true) {
-   String nowTime = GetCurrentTime("hh:mm:ss");
-   System.out.print(" ²{¦b®É¶¡: " + nowTime + "\r");
-   // ÀË¬d¬O§_®É¶¡¨ì
-   if (nowTime.equals(alarmTime)) {
-    Alarm_UP(5); // °õ¦æ¾xÄÁ¹aÅT
-    break;
-   }
-  }
- }
-
- public static String SetAlarmTime()  {
-  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-  System.out.print("½Ð¿é¤J¾x¹a®É¶¡(hh:mm:ss):");
-  String line = null;
-  try {
-    line = br.readLine();
-  } catch (IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-  }
-  return line;
- } // ®ÉÄÁµ{¦¡
-
- public static String GetCurrentTime(String dateFormat) {
-  Calendar cal = Calendar.getInstance();
-  SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
-  return sdf.format(cal.getTime());
- } // ¾x¹aµ{¦¡ num ¬O¾x¹aÅTªº¦¸¼Æ
-
- public static void Alarm_UP(int num) {
-  char BEE = (char) 7; // ¹Í¹ÍÁn
-  for (int i = 0; i < num; i++) {
-   Random random = new Random();
-   Scanner keyboard = new Scanner(System.in);
-   System.out.println("Ãi½Þ °_§É!!! ®É¶¡¨ìÅo!! " + BEE);
-   badword();
-   /*////////////////////////////////////////////////////////////////////////
-   File audioFile = new File("123");
-   AudioPlayer player = AudioPlayer.createPlayer(audioFile);
-   player.play();*/
-   //////////////////////////////////////////////////////////// ¼Æ¾ÇÃD¥Ø
-   int aa = random.nextInt(1000);
-   int bb = random.nextInt(1000);
-   int cc = aa + bb;
-
-   System.out.println(aa + "+" + bb);
-   System.out.print("Answer:");
-   int dd = keyboard.nextInt();
-
-   while (dd != cc) {
-    System.out.println(aa + "+" + bb);
-    System.out.print("Answer:");
-    dd = keyboard.nextInt();
-    keyboard.close();
-    /////////////////////////////////////////////////////////////
-   }
-
+  public static void clockk() {
+    System.out.print("ç¾åœ¨æ™‚é–“: " + GetCurrentTime("hh:mm:ss") + "\r");
+    System.out.println("");
+    // String nowTime = GetCurrentTime("hh:mm:ss");
+    // è¨­å®šé¬§éˆ´æ™‚é–“
+    String alarmTime = SetAlarmTime();
+    // åŸ·è¡Œé¬§éˆ´ç¨‹å¼
+    try {
+      Check_AlarmTime(alarmTime);
+    } catch (Exception e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
 
- }
+  public static void Check_AlarmTime(String alarmTime) throws Exception {
+    while (true) {
+      String nowTime = GetCurrentTime("hh:mm:ss");
+      System.out.print(" ç¾åœ¨æ™‚é–“: " + nowTime + "\r");
+      // æª¢æŸ¥æ˜¯å¦æ™‚é–“åˆ°
+      if (nowTime.equals(alarmTime)) {
+        Alarm_UP(5); // åŸ·è¡Œé¬§é˜éˆ´éŸ¿
+        break;
+      }
+    }
+  }
 
- ///////////////////////////////////////////////////////////////////////// ½|¤H
- public static void badword() {
-  int a;
-  Random random = new Random();
-  a = random.nextInt(10);
+  public static String SetAlarmTime() {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    System.out.print("è«‹è¼¸å…¥é¬§éˆ´æ™‚é–“(hh:mm:ss):");
+    String line = null;
+    try {
+      line = br.readLine();
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    return line;
+  } // æ™‚é˜ç¨‹å¼
 
-  switch (a) {
-  case 1:
-   System.out.println("§Aªøªº«Ü³¥Ã~¬£¹À¡I");
-   break;
-  case 2:
-   System.out.println("§Aªø±o¯u¬O¬D¾Ô¬ü¾Ç§r¡I");
-   break;
-  case 3:
-   System.out.println("§Aªø¦¨³o¼Ë§A¶ý¶ýª¾¹D¶Ü¡H");
-   break;
-  case 4:
-   System.out.println("§Aªø±o¯uªº¦³°÷Áà");
-   break;
-  case 5:
-   System.out.println("§Aªø±o¯u¦³³Ð·N¡A¬¡±o¯u¦³«i®ð¡I");
-   break;
-  case 6:
-   System.out.println("§Aªøªº¸vµL§Ò¼ª¡B¦³«îµL®£ªº¡I");
-   break;
-  case 7:
-   System.out.println("§A¬ï±o«Ü¦MÀI¡A¦ýªø±o«Ü¦w¥þ¡C");
-   break;
-  case 8:
-   System.out.println("§A¥h·Ó·ÓÃè¤l¡A«OÃÒ¯à§â§AÀ~¦º¡C");
-   break;
-  case 9:
-   System.out.println("§ÚÄU§A¤@¥y¡A§AÁÙ¬O­«·s§ë­L¤ñ¸û¦n¡C");
-   break;
-  case 10:
-   System.out.println("«uËç¡A§AÁy«ç»ò¤F¡Aªo¨ì¤Ï¥ú¬Ý¤£²M¤F¡I");
-   break;
+  public static String GetCurrentTime(String dateFormat) {
+    Calendar cal = Calendar.getInstance();
+    SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
+    return sdf.format(cal.getTime());
+  } // é¬§éˆ´ç¨‹å¼ num æ˜¯é¬§éˆ´éŸ¿çš„æ¬¡æ•¸
+
+  public static void Alarm_UP(int num) {
+    char BEE = (char) 7; // å—¶å—¶è²
+    for (int i = 0; i < num; i++) {
+      Random random = new Random();
+      Scanner keyboard = new Scanner(System.in);
+      System.out.println("æ‡¶è±¬ èµ·åºŠ!!! æ™‚é–“åˆ°å›‰!! " + BEE);
+      badword();
+      /*
+       * //////////////////////////////////////////////////////////////////////// File
+       * audioFile = new File("123"); AudioPlayer player =
+       * AudioPlayer.createPlayer(audioFile); player.play();
+       */
+      //////////////////////////////////////////////////////////// æ•¸å­¸é¡Œç›®
+      int aa = random.nextInt(1000);
+      int bb = random.nextInt(1000);
+      int cc = aa + bb;
+
+      System.out.println(aa + "+" + bb);
+      System.out.print("Answer:");
+      int dd = keyboard.nextInt();
+
+      while (dd != cc) {
+        badword();
+        System.out.println(aa + "+" + bb);
+        System.out.print("Answer:");
+        dd = keyboard.nextInt();
+
+        /////////////////////////////////////////////////////////////
+      }
+
+    }
 
   }
 
- }
+  ///////////////////////////////////////////////////////////////////////// ç½µäºº
+  public static void badword() {
+    int a;
+    Random random = new Random();
+    a = random.nextInt(10);
+
+    switch (a) {
+    case 1:
+      System.out.println("ä½ é•·çš„å¾ˆé‡Žç¸æ´¾å˜›ï¼");
+      break;
+    case 2:
+      System.out.println("ä½ é•·å¾—çœŸæ˜¯æŒ‘æˆ°ç¾Žå­¸å‘€ï¼");
+      break;
+    case 3:
+      System.out.println("ä½ é•·æˆé€™æ¨£ä½ åª½åª½çŸ¥é“å—Žï¼Ÿ");
+      break;
+    case 4:
+      System.out.println("ä½ é•·å¾—çœŸçš„æœ‰å¤ é†œ");
+      break;
+    case 5:
+      System.out.println("ä½ é•·å¾—çœŸæœ‰å‰µæ„ï¼Œæ´»å¾—çœŸæœ‰å‹‡æ°£ï¼");
+      break;
+    case 6:
+      System.out.println("ä½ é•·çš„è‚†ç„¡å¿Œæ†šã€æœ‰æƒç„¡æçš„ï¼");
+      break;
+    case 7:
+      System.out.println("ä½ ç©¿å¾—å¾ˆå±éšªï¼Œä½†é•·å¾—å¾ˆå®‰å…¨ã€‚");
+      break;
+    case 8:
+      System.out.println("ä½ åŽ»ç…§ç…§é¡å­ï¼Œä¿è­‰èƒ½æŠŠä½ åš‡æ­»ã€‚");
+      break;
+    case 9:
+      System.out.println("æˆ‘å‹¸ä½ ä¸€å¥ï¼Œä½ é‚„æ˜¯é‡æ–°æŠ•èƒŽæ¯”è¼ƒå¥½ã€‚");
+      break;
+    case 10:
+      System.out.println("å“Žå‘¦ï¼Œä½ è‡‰æ€Žéº¼äº†ï¼Œæ²¹åˆ°åå…‰çœ‹ä¸æ¸…äº†ï¼");
+      break;
+
+    }
+
+  }
 
 }
